@@ -40,6 +40,10 @@ const Contacts: FC = () => {
     });
   };
 
+  const bbb = async () => {
+    const aa = await fetch('');
+  };
+
   useEffect(() => {
     console.log(value);
     // setValue(1);

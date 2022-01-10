@@ -37,6 +37,10 @@
       1,
       { "skipBlankLines": false, "ignoreComments": false }
     ],
+    "no-multiple-empty-lines": 1,
+    "prefer-const": 1,
+    "no-multi-spaces": 1,
+    "semi": 1,
 
     "react/function-component-definition": 0,
     "react-hooks/rules-of-hooks": 1,
@@ -47,7 +51,7 @@
     "react/no-unused-class-component-methods": 1,
     "react/jsx-filename-extension": [
       1,
-      { "extensions": [".js", ".jsx", "ts", "tsx"] }
+      { "extensions": [".js", ".jsx", "ts", "tsx", "css", "scss"] }
     ]
   }
 }
