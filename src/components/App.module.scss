@@ -1,0 +1,16 @@
+@use 'src/stylesheet/vars' as v;
+
+.title {
+  // color: orange;
+  color: v.$main-color;
+}
+.contPhotos {
+  display: flex;
+}
+.contCat {
+  height: 200px;
+  background-image: url('../images/cat1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+}

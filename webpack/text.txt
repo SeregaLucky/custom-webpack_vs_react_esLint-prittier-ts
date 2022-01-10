@@ -1,0 +1,73 @@
+/* ПРОБЛЕМЫ */
+// 1 babel-loader - преобразовывает в es5 лишь в деве но не для прода
+// 2 для прода вот это работает если нужен es5 - target: ['web', 'es5']
+
+// assetModuleFilename: '[path]/[name].[ext]',
+
+{
+  // {
+  //   test: /\.(?:ico|gif|png|jpg|jpeg)$/,
+  //   // Картинки в отдельно будут
+  //   type: 'asset/resource',
+  //   // Картинки в js будут в фортате base64
+  //   type: 'asset/inline',
+  //   // Маленькие картинки положет в джеес а большие отеднльно
+  //   type: 'asset',
+  // },
+  // {
+  //   test: /\.(?:ico|gif|png|jpg|jpeg)$/,
+  //   // Маленькие картинки положет в джеес а большие отеднльно
+  //     type: 'asset',
+  //     parser: {
+  //       dataUrlCondition: {
+  //         maxSize: 4 * 1024 // 4kb // default 8KB
+  //       }
+  //     }
+  // },
+}
+
+{
+  // test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+  test: /\.(woff(2)?|eot|ttf|otf|)$/,
+  type: 'asset/inline',
+},
+
+{
+  // {
+  //   test: /\.svg$/,
+  //   use: [
+  //     // '@svgr/webpack',
+  //     {
+  //       loader: '@svgr/webpack',
+  //       options: {
+  //         titleProp: true,
+  //         // outDir: path.resolve(__dirname, '../../build/images'),
+  //         outDir: 'images',
+  //       },
+  //     },
+  //     // {
+  //     //   loader: '@svgr/webpack',
+  //     //   options: { name: '[path]/[name].[ext]' },
+  //     // },
+  //     'url-loader',
+  //   ],
+  // },
+  // {
+  //   type: 'asset',
+  //   // type: 'asset/resource',
+  //   // type: 'assets/svg',
+  //   resourceQuery: /url/, // *.svg?url
+  // },
+  // {
+  //   test: /\.svg$/,
+  //   issuer: /\.[jt]sx?$/,
+  //   use: ['@svgr/webpack'],
+  // },
+  // {
+  //   test: /\.svg/,
+  //   type: 'asset/resource',
+  //   generator: {
+  //     filename: 'icons/[hash][ext][query]',
+  //   },
+  // },
+}

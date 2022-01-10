@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es2021",
+    // "jsx": "react",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node"
+  }
+
+  // "include": ["src/**/*.tsx?"]
+}
