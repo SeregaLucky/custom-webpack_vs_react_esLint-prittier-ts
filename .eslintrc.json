@@ -41,6 +41,8 @@
     "prefer-const": 1,
     "no-multi-spaces": 1,
     "semi": 1,
+    "lines-between-class-members": 0,
+    "no-shadow": 0,
 
     "react/function-component-definition": 0,
     "react-hooks/rules-of-hooks": 1,

@@ -2,13 +2,14 @@
   "compilerOptions": {
     "outDir": "./build/",
     "sourceMap": true,
-    "noImplicitAny": true,
     "module": "esnext",
-    "target": "es2021",
+    "target": "es6",
     // "jsx": "react",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true
   }
 
   // "include": ["src/**/*.tsx?"]
