@@ -9,7 +9,7 @@ import imgBase64, { ReactComponent as ReactLogo } from '../images/santa.svg';
 // import { getSum } from '../helpers/getSum';
 
 const App = () => {
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState<{ id: number; n: string }[]>([]);
   console.log(value);
 
   const addList = () => setValue([{ id: 1, n: 'Ania' }]);

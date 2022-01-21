@@ -91,3 +91,122 @@ type Pc1 = ReturnType<keyof f1>;
 
 //
 //
+//
+//
+
+type Person = { age: number; name: string; alive: boolean };
+type Age = Person['age'];
+
+type AliveOrName = 'alive' | 'name';
+type I3 = Person[AliveOrName];
+
+type I1 = Person['alve'];
+
+//
+//
+
+const MyArray = [
+  { name: 'Alice', age: 15 },
+  { name: 'Bob', age: 23 },
+  { name: 'Eve', age: 38 },
+];
+
+type Person1 = typeof MyArray[number];
+type Age1 = typeof MyArray[number]['age'];
+type Age2 = Person['age'];
+
+const key = 'age';
+type Age3 = Person[key];
+
+//
+//
+//
+//
+
+interface Animal {
+  live(): void;
+}
+interface Dog extends Animal {
+  woof(): void;
+}
+
+type Example1 = Dog extends Animal ? number : string;
+type Example2 = RegExp extends Animal ? number : string;
+
+//
+//
+
+interface IdLabel {
+  id: number /* some fields */;
+}
+interface NameLabel {
+  name: string /* other fields */;
+}
+
+type NameOrId<T extends number | string> = T extends number
+  ? IdLabel
+  : NameLabel;
+
+function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
+  throw 'unimplemented';
+}
+
+let a1 = createLabel('typescript');
+let b1 = createLabel(2.8);
+let c1 = createLabel(Math.random() ? 'hello' : 42);
+let ii1 = createLabel({});
+
+//
+
+function createLabel1<T extends number | string | boolean>(
+  idOrName: T,
+): NameOrId<T> {
+  throw 'unimplemented';
+}
+let ii00 = createLabel1(true);
+
+//
+//
+//
+//
+
+type OptionsFlags<Type> = {
+  [Property in keyof Type]: boolean;
+};
+
+type FeatureFlags = {
+  darkMode: () => void;
+  newUserProfile: () => void;
+};
+type FeatureOptions = OptionsFlags<FeatureFlags>;
+
+//
+//
+
+type Getters<Type> = {
+  [Prop in keyof Type as `get${Capitalize<string & Prop>}`]: () => Type[Prop];
+};
+
+interface Person123 {
+  name: string;
+  age: number;
+  location: string;
+}
+
+type LazyPerson = Getters<Person123>;
+
+//
+//
+//
+//
+
+type EmailLocaleIDs = 'welcome_email' | 'email_heading';
+type FooterLocaleIDs = 'footer_title' | 'footer_sendoff';
+
+type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
+
+//
+//
+
+type Greeting = 'Hello, world';
+type ShoutyGreeting = Uppercase<Greeting>;
