@@ -1,7 +1,11 @@
+const { DefinePlugin, ProvidePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const dotenv = require('dotenv');
 const paths = require('../utils/paths');
 const modes = require('../utils/modes');
+
+dotenv.config();
 
 module.exports = (env, args) => {
   const { mode } = args;
@@ -81,11 +85,20 @@ module.exports = (env, args) => {
           },
         ],
       }),
+
+      new ProvidePlugin({
+        process: 'process/browser',
+      }),
+
+      new DefinePlugin({
+        'process.env': JSON.stringify(process.env),
+      }),
     ],
 
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       alias: {
+        process: 'process/browser',
         '@src': paths.SRC_DIR,
       },
     },
