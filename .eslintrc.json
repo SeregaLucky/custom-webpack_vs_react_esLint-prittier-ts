@@ -43,6 +43,7 @@
     "semi": 1,
     "lines-between-class-members": 0,
     "no-shadow": 0,
+    // "default-case": 1,
 
     "react/function-component-definition": 0,
     "react-hooks/rules-of-hooks": 1,

@@ -4,6 +4,7 @@ import styles from './App.module.scss';
 import cat from '../images/cat1.jpg';
 import { useRoutesConstants } from '../hooks/useRoutesConstants';
 import imgBase64, { ReactComponent as ReactLogo } from '../images/santa.svg';
+// import imgBase64, { ReactComponent as ReactLogo } from '/images/santa.svg';
 // import imgBase64, { ReactComponent as ReactLogo } from '@/images/santa.svg';
 // import { getSum } from './helpers/getSum';
 // import { getSum } from '../helpers/getSum';

@@ -9,7 +9,28 @@
     "allowJs": true,
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    // "strictNullChecks": true,
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+
+    "noImplicitThis": true,
+    // "noUncheckedIndexedAccess": true
+    "strict": true,
+    "allowSyntheticDefaultImports": true
+
+    // "baseUrl": "./src",
+    // "baseUrl": "src",
+    // "paths": {
+    //   "app/*": ["app/*"],
+    //   "config/*": ["app/_config/*"],
+    //   "environment/*": ["environments/*"],
+    //   "shared/*": ["app/_shared/*"],
+    //   "helpers/*": ["helpers/*"],
+    //   "tests/*": ["tests/*"]
+    // }
   }
 
   // "include": ["src/**/*.tsx?"]
