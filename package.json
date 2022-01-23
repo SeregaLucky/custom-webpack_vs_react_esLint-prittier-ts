@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --mode=development --config ./webpack/webpack.config.js",
-    "build": "сross-env NODE_ENV=production webpack --mode=production --config ./webpack/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --mode=production --config ./webpack/webpack.config.js",
     "lint": "eslint --debug src/",
     "lint:w": "eslint --debug src/ --fix",
     "wp": "webpack --mode=development"
